@@ -52,7 +52,7 @@ const App = (): JSX.Element => {
   return (
     <div style={{ width: '1000px', margin: '0 auto' }}>
       <Form onSubmit={handleSubmit}>
-        <Grid container>
+        <Grid container spacing={2}>
           <Grid item xs={6}>
             <Input
               name='fullName'
@@ -112,17 +112,12 @@ const App = (): JSX.Element => {
             />
           </Grid>
           <Grid item xs={6}>
-            <Checkbox
-              name='isPermanent'
-              label='Permanent Employee'
-              value={values.isPermanent}
-              onChange={handleInputChange}
-            />
+            <Checkbox name='isPermanent' label='是否记住' value={values.isPermanent} onChange={handleInputChange} />
           </Grid>
           <Grid item xs={6}>
             <div>
-              <Button type='submit' text='Submit' />
-              <Button text='Reset' onClick={resetForm} />
+              <Button type='submit' text='提交' />
+              <Button text='重置' onClick={resetForm} />
             </div>
           </Grid>
         </Grid>

@@ -10,6 +10,7 @@ export const Input = (props: any) => {
       name={name}
       value={value}
       onChange={onChange}
+      sx={{ width: '100%' }}
       {...(error && { error: true, helperText: error })}
     />
   );

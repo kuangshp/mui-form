@@ -5,7 +5,7 @@ export const Select = (props: any) => {
   const { name, label, value, error = null, variant, onChange, options } = props;
 
   return (
-    <FormControl variant={variant || 'outlined'} {...(error && { error: true, helperText: error })}>
+    <FormControl fullWidth variant={variant || 'outlined'} {...(error && { error: true, helperText: error })}>
       <InputLabel>{label}</InputLabel>
       <MuiSelect label={label} name={name} value={value} onChange={onChange}>
         <MenuItem value=''>None</MenuItem>
